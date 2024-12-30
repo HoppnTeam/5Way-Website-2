@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Hero from './components/Hero';
@@ -20,6 +19,7 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import BlogManager from './pages/admin/blog/BlogManager';
 import ProjectManager from './pages/admin/projects/ProjectManager';
 import ServiceManager from './pages/admin/services/ServiceManager';
+import DashboardLayout from './components/dashboard/DashboardLayout';
 
 function HomePage() {
   return (
@@ -46,12 +46,14 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/contact" element={<Contact />} />
-        
+
         {/* Admin Routes */}
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/admin/blog" element={<BlogManager />} />
-        <Route path="/admin/projects" element={<ProjectManager />} />
-        <Route path="/admin/services" element={<ServiceManager />} />
+        <Route path="/admin" element={<DashboardLayout />} >
+          <Route index element={<AdminDashboard />} />
+          <Route path="blog" element={<BlogManager />} />
+          <Route path="projects" element={<ProjectManager />} />
+          <Route path="services" element={<ServiceManager />} />
+        </Route>
       </Routes>
     </Router>
   );
