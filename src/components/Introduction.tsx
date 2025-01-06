@@ -1,18 +1,34 @@
-import React from 'react';
+
 import { Building2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from './ui/Button';
 
 export default function Introduction() {
   return (
-    <div className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-16 bg-white">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
-          <Building2 className="w-16 h-16 text-green-700 mb-6" />
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">About 5Way</h2>
+          <Building2 className="w-16 h-16 mb-6 text-green-700" />
+          <h2 className="mb-4 text-3xl font-bold text-gray-900">Ready to Build? Let&apos;s Make It Happen.</h2>
           <div className="max-w-3xl">
             <p className="text-lg text-gray-600">
-              5Way General Contractors is Nigeria's premier construction company, dedicated to delivering exceptional building solutions. With over a decade of experience, we combine innovative techniques with traditional craftsmanship to create spaces that inspire and endure.
+              Contact 5Way today to discuss your project. Whether you&apos;re building from abroad or locally, we&apos;re here to make your vision a reality.
             </p>
           </div>
+
+          <div className="flex items-center justify-center gap-4 mt-5 lg:mt-12">
+            <Link to="/services" className="inline-block">
+              <Button>
+                Schedule a Free Consultation
+              </Button>
+            </Link>
+            <Link to="/cost-calculator" className="inline-block">
+              <Button variant='secondary' className='border border-green-700'>
+                Get a Building Estimate
+              </Button>
+            </Link>
+          </div>
+
         </div>
       </div>
     </div>

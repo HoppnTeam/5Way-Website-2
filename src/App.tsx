@@ -25,12 +25,12 @@ function HomePage() {
   return (
     <Layout>
       <Hero />
-      <Introduction />
-      <Services />
       <DiasporaPackage />
+      <Services />
       <WhyChooseUs />
-      <Testimonials />
-      <Blog />
+      <Introduction />
+      {/* <Testimonials /> */}
+      {/* <Blog /> */}
     </Layout>
   );
 }
