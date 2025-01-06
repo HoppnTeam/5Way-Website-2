@@ -4,19 +4,19 @@ export default function AboutHero() {
   return (
     <div className="relative h-[500px]">
       <div 
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-center bg-cover"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80")'
+          backgroundImage: 'url("/about-us-hero.webp")'
         }}
       >
         <div className="absolute inset-0 bg-black/60" />
       </div>
-      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+      <div className="relative flex items-center h-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div>
-          <h1 className="text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <h1 className="mb-4 text-5xl font-bold text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
             Together We Build With Passion
           </h1>
-          <p className="text-xl text-gray-200 max-w-2xl">
+          <p className="max-w-2xl text-xl text-gray-200">
             Building excellence through innovation and dedication since 2010, serving Nigeria with world-class construction solutions.
           </p>
         </div>
