@@ -10,15 +10,15 @@ export default function BlogManager() {
 
   return (
     <AdminLayout>
-      <div className="p-6">
-        <div className="flex justify-between items-center mb-6">
+      <div className="w-full p-6 ">
+        <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-bold text-gray-900">Blog Management</h1>
           <button
             onClick={() => {
               setSelectedPost(null);
               setIsEditing(true);
             }}
-            className="px-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800"
+            className="px-4 py-2 text-white bg-green-700 rounded-lg hover:bg-green-800"
           >
             New Post
           </button>

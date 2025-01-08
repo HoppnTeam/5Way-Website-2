@@ -5,8 +5,6 @@ import Introduction from './components/Introduction';
 import Services from './components/Services';
 import DiasporaPackage from './components/DiasporaPackage';
 import WhyChooseUs from './components/WhyChooseUs';
-import Testimonials from './components/Testimonials';
-import Blog from './components/Blog';
 import About from './pages/About';
 import ServicesPage from './pages/Services';
 import Capabilities from './pages/Capabilities';
@@ -50,9 +48,10 @@ export default function App() {
         {/* Admin Routes */}
         <Route path="/admin" element={<DashboardLayout />} >
           <Route index element={<AdminDashboard />} />
-          <Route path="blog" element={<BlogManager />} />
+          <Route path="blogs" element={<BlogManager />} />
           <Route path="projects" element={<ProjectManager />} />
           <Route path="services" element={<ServiceManager />} />
+          <Route path="*" element={<ServiceManager />} />
         </Route>
       </Routes>
     </Router>
